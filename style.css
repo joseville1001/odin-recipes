@@ -6,13 +6,12 @@ h1 {
     background-color: yellow;   
 }
 
-/* li:nth-child(4n+1):not(li li) {
-    background-color: yellow;
-} */
-
-/* li:nth-child(4n+2):not(li li) {
-    background-color: yellow;
-} */
+/* 
+Style top-level <li>s' (i.e. each <li> not nested within another <li>)
+background color to emulate Colombian 🇨🇴 flags (yellow, yellow, blue, red, repeat).
+Also, the <li>s with blue and red bg should have white text to provide contrast,
+but still keep their markers black.
+ */
 
 :is(li:nth-child(4n+1), li:nth-child(4n+2)):not(li li) {
     background-color: yellow;
@@ -20,11 +19,15 @@ h1 {
 
 li:nth-child(4n+3):not(li li) {
     background-color: blue;
-    color: white;
+    /* color: white; */
 }
 
 li:nth-child(4n+4):not(li li) {
     background-color: red;
+    /* color: white; */
+}
+
+:is(li:nth-child(4n+3), li:nth-child(4n+4)):not(li li) {
     color: white;
 }
 
