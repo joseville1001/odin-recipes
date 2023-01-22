@@ -6,12 +6,10 @@ h1 {
     background-color: yellow;   
 }
 
-/* 
-Style top-level <li>s' (i.e. each <li> not nested within another <li>)
+/* Style top-level <li>s' (i.e. each <li> not nested within another <li>)
 background color to emulate Colombian 🇨🇴 flags (yellow, yellow, blue, red, repeat).
 Also, the <li>s with blue and red bg should have white text to provide contrast,
-but still keep their markers black.
- */
+but still keep their markers black. */
 
 :is(li:nth-child(4n+1), li:nth-child(4n+2)):not(li li) {
     background-color: yellow;
