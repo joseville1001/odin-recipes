@@ -1,0 +1,37 @@
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    background-color: yellow;   
+}
+
+/* li:nth-child(4n+1):not(li li) {
+    background-color: yellow;
+} */
+
+/* li:nth-child(4n+2):not(li li) {
+    background-color: yellow;
+} */
+
+:is(li:nth-child(4n+1), li:nth-child(4n+2)):not(li li) {
+    background-color: yellow;
+}
+
+li:nth-child(4n+3):not(li li) {
+    background-color: blue;
+    color: white;
+}
+
+li:nth-child(4n+4):not(li li) {
+    background-color: red;
+    color: white;
+}
+
+:is(li:nth-child(4n+3), li:nth-child(4n+4)):not(li li) a {
+    color: white;
+}
+
+:is(li:nth-child(4n+3), li:nth-child(4n+4)):not(li li)::marker {
+    color: black;
+}
